@@ -5,10 +5,12 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
+
 using namespace std;
-const int shellarr[6] = { 9,7,5,3,1,0 };
+
 const int dly = 8;
 const int dlyy = 5;
+
 void SetColor(int text, int background)
 {
     HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -27,23 +29,6 @@ void Interface()
     cout << endl << "\t\t\t\t" << "(6) Удаление матрицы ";
     cout << endl << "\t\t\t\t" << "(0) Чтобы закончить работу программы ";
 }
-
-//void Guide()
-//{
-//    cout << "И так, Сортировка Шелла является немного улучшенной версией любой другой сортировки" << endl;
-//    cout << "Суть её заключается в том, что мы сортруем сначала какие-то определённые разбиения (В нашем случае 9, 7, 5, 3), а потом начинаем работать обычным по парным сравнением" << endl;
-//    cout << "Пример: " << endl;
-//    cout << "Сортируем элементы по возрастанию." << endl;
-//    cout << "1, 5, 2, -4, 7, 9, 3, 2, 4, 0" << endl;
-//    cout << "1 разбиение = 9 и сравниваем числа на дистанции 9(то есть 1 и 0" << endl;
-//    cout << "0, 5, 2, -4, 7, 9, 3, 2, 4, 1" << endl;
-//    cout << "2 разбиение = 7 (сравниваем 0 и 2, 5 и 4, 2 и 1)" << endl;
-//    cout << "0, 4, 1, -4, 7, 9, 3, 2, 5, 2" << endl;
-//    cout << ".  .  ." << endl;
-//    cout << "В конце берём разбиение 1 (оно же обычное попарное): " << endl;
-//    cout << "-4, 0, 1, 2, 2, 3, 4, 5, 7, 9" << endl;
-//    cout << "Сортировка завершена" << endl;
-//}
 
 class ArrayMatrix
 {
@@ -346,7 +331,7 @@ void sort(ArrayMatrix& alg)
         i++;
     }
     int j = 0;
-    int dm[alg.size1];
+    double dm[alg.size1];
     for (i = 1; i < alg.size1; i++)
     {
     	for(int t = 0;t < alg.size1;t++){
